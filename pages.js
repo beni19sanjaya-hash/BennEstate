@@ -2,6 +2,29 @@
 //  PAGES.JS — Shared scripts for all inner pages
 // ===================================================
 
+// ===== HAMBURGER MENU =====
+const hamburger = document.getElementById('hamburger');
+const navLinksMenu = document.getElementById('nav-links');
+
+if (hamburger && navLinksMenu) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinksMenu.classList.toggle('open');
+  });
+  navLinksMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinksMenu.classList.remove('open');
+    });
+  });
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navLinksMenu.contains(e.target)) {
+      hamburger.classList.remove('open');
+      navLinksMenu.classList.remove('open');
+    }
+  });
+}
+
 // ===== NAVBAR SCROLL SHADOW =====
 const navbar = document.getElementById('navbar');
 if (navbar) {
