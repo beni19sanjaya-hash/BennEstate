@@ -73,22 +73,7 @@ img {
   gap: 16px;
 }
 
-.nav-links {
-  display: flex;
-  gap: 28px;
-}
-
-.nav-links a {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text);
-  transition: color var(--transition);
-}
-
-.nav-links a:hover {
-  color: var(--primary);
-}
-
+/* Logo — always visible */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -96,27 +81,157 @@ img {
   font-weight: 700;
   font-size: 18px;
   color: var(--primary);
+  flex-shrink: 0;
+  text-decoration: none;
 }
 
-.nav-logo i {
-  font-size: 22px;
+.nav-logo i { font-size: 22px; }
+
+/* Desktop nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
 }
 
-.nav-phone {
+.nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  transition: color var(--transition);
+  white-space: nowrap;
+}
+
+.nav-links a:hover { color: var(--primary); }
+
+/* Book/Buy — hidden on desktop, shown in mobile menu only */
+.nav-links li:has(.nav-mobile-book) {
+  display: none;
+}
+
+/* Right side: CTA button + hamburger */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Desktop CTA button (replaces phone) */
+.nav-cta-btn {
   display: flex;
   align-items: center;
   gap: 8px;
   background: var(--primary);
   color: var(--white);
-  padding: 8px 18px;
+  padding: 9px 20px;
   border-radius: 50px;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
+  transition: background var(--transition);
+  white-space: nowrap;
+}
+.nav-cta-btn:hover { background: var(--primary-dark); }
+
+/* Hamburger button — hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: var(--gray-light);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 8px;
   transition: background var(--transition);
 }
 
-.nav-phone:hover {
-  background: var(--primary-dark);
+.hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--dark);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger:hover { background: var(--primary-light); }
+
+/* Hamburger → X animation */
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ===== MOBILE NAV ===== */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+
+  /* Show Book/Buy item in mobile menu */
+  .nav-links li:has(.nav-mobile-book) {
+    display: block;
+  }
+
+  /* Hide the Book/Buy CTA on mobile — it's in the menu */
+  .nav-cta-btn { display: none; }
+
+  .nav-links {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(16px);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 12px 0 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    transform: translateY(-110%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 13px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 1px solid #f0f2f8;
+    color: var(--text);
+  }
+
+  .nav-links li:last-child a { border-bottom: none; }
+
+  /* Book/Buy item — mobile only, styled as full-width pill */
+  .nav-links .nav-mobile-book {
+    display: block;
+    margin: 8px 20px 4px;
+    background: var(--primary);
+    color: white !important;
+    border-radius: 12px;
+    text-align: center;
+    padding: 13px 16px !important;
+    font-weight: 700;
+    border-bottom: none !important;
+  }
+
+  .nav-links .nav-mobile-book:hover {
+    background: var(--primary-dark) !important;
+    color: white !important;
+  }
 }
 
 /* ===== HERO ===== */
@@ -841,23 +956,8 @@ img {
 }
 
 @media (max-width: 640px) {
-  .nav-links { display: none; }
   .category-grid { grid-template-columns: repeat(2, 1fr); }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .properties-grid { grid-template-columns: 1fr; }
-}
-
-/* Book/Buy nav pill */
-.nav-links a.nav-book-btn {
-  background: var(--primary);
-  color: var(--white) !important;
-  padding: 6px 16px;
-  border-radius: 50px;
-  font-weight: 700;
-  transition: background var(--transition);
-}
-
-.nav-links a.nav-book-btn:hover {
-  background: var(--primary-dark);
 }
