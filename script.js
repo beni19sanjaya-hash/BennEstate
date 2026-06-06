@@ -1,3 +1,30 @@
+// ===== HAMBURGER MENU =====
+const hamburger = document.getElementById('hamburger');
+const navLinksMenu = document.getElementById('nav-links');
+
+if (hamburger && navLinksMenu) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinksMenu.classList.toggle('open');
+  });
+
+  // Close menu when a link is clicked
+  navLinksMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinksMenu.classList.remove('open');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navLinksMenu.contains(e.target)) {
+      hamburger.classList.remove('open');
+      navLinksMenu.classList.remove('open');
+    }
+  });
+}
+
 // ===== NAVBAR SCROLL EFFECT =====
 const navbar = document.getElementById('navbar');
 
