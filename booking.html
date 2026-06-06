@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book or Buy - BennEstate</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <link rel="stylesheet" href="booking.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="agent.html">Agent</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="booking.html" class="nav-book-btn active">Book / Buy</a></li>
+      </ul>
+      <div class="nav-logo">
+        <i class="fa-solid fa-building-columns"></i>
+        <span>BennEstate</span>
+      </div>
+      <a href="tel:+6881823427079" class="nav-phone">
+        <i class="fa-solid fa-phone"></i>
+        +6881 823 427 079
+      </a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero bk-hero">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="page-breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right"></i> Book or Buy
+      </p>
+      <h1>Book or Buy a Property</h1>
+      <p>Jadwalkan kunjungan atau ajukan pembelian properti impian Anda sekarang.</p>
+
+      <!-- Mode Switch -->
+      <div class="bk-mode-switch">
+        <button class="bk-mode-btn active" data-mode="book">
+          <i class="fa-solid fa-calendar-check"></i> Schedule a Visit
+        </button>
+        <button class="bk-mode-btn" data-mode="buy">
+          <i class="fa-solid fa-key"></i> Buy Property
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="bk-main">
+    <div class="container">
+
+      <!-- ===== BOOK / SCHEDULE VISIT ===== -->
+      <div class="bk-panel active" id="panel-book">
+
+        <div class="bk-grid">
+
+          <!-- Form -->
+          <div class="bk-form-wrap">
+            <div class="bk-form-header">
+              <div class="bk-form-icon"><i class="fa-solid fa-calendar-check"></i></div>
+              <div>
+                <h2>Schedule a Property Visit</h2>
+                <p>Isi form di bawah dan agent kami akan konfirmasi jadwal dalam 1x24 jam.</p>
+              </div>
+            </div>
+
+            <form id="form-book" class="bk-form">
+              <div class="bk-form-row">
+                <div class="bk-field">
+                  <label>Nama Lengkap <span>*</span></label>
+                  <input type="text" placeholder="John Doe" required />
+                </div>
+                <div class="bk-field">
+                  <label>Nomor Telepon <span>*</span></label>
+                  <input type="tel" placeholder="+62 812 3456 7890" required />
+                </div>
+              </div>
+              <div class="bk-form-row">
+                <div class="bk-field">
+                  <label>Email <span>*</span></label>
+                  <input type="email" placeholder="john@email.com" required />
+                </div>
+                <div class="bk-field">
+                  <label>Properti yang Diminati</label>
+                  <select>
+                    <option value="">Pilih Properti</option>
+                    <option>Skyper Pool Apartment</option>
+                    <option>Cedar Residence</option>
+                    <option>Lakeside Apartment</option>
+                    <option>Sky Tower Residences</option>
+                    <option>Emerald Villa Park</option>
+                    <option>Green Park Duplex</option>
+                    <option>Lainnya</option>
+                  </select>
+                </div>
+              </div>
+              <div class="bk-form-row">
+                <div class="bk-field">
+                  <label>Tanggal Kunjungan <span>*</span></label>
+                  <input type="date" required />
+                </div>
+                <div class="bk-field">
+                  <label>Waktu Pilihan</label>
+                  <select>
+                    <option>09:00 – 10:00</option>
+                    <option>10:00 – 11:00</option>
+                    <option>11:00 – 12:00</option>
+                    <option>13:00 – 14:00</option>
+                    <option>14:00 – 15:00</option>
+                    <option>15:00 – 16:00</option>
+                  </select>
+                </div>
+              </div>
+              <div class="bk-field full">
+                <label>Catatan Tambahan</label>
+                <textarea placeholder="Pertanyaan atau kebutuhan khusus Anda..." rows="4"></textarea>
+              </div>
+              <button type="submit" class="bk-submit">
+                <i class="fa-solid fa-calendar-check"></i> Jadwalkan Kunjungan
+              </button>
+            </form>
+          </div>
+
+          <!-- Sidebar Info -->
+          <aside class="bk-sidebar">
+
+            <!-- Agent Card -->
+            <div class="bk-agent-card">
+              <div class="bk-agent-photo" style="background-image:url('https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80')"></div>
+              <div class="bk-agent-body">
+                <span class="bk-agent-online"><i class="fa-solid fa-circle"></i> Online</span>
+                <h4>Budi Santoso</h4>
+                <p>Senior Property Consultant</p>
+                <div class="bk-agent-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span>4.9 (128 ulasan)</span>
+                </div>
+                <div class="bk-agent-btns">
+                  <a href="https://wa.me/6281234567890" class="bk-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                  <a href="tel:+6881823427079" class="bk-call"><i class="fa-solid fa-phone"></i> Call</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Why Visit -->
+            <div class="bk-info-box">
+              <h5><i class="fa-solid fa-circle-info"></i> Kenapa Kunjungi Langsung?</h5>
+              <ul>
+                <li><i class="fa-solid fa-check"></i> Lihat kondisi nyata properti</li>
+                <li><i class="fa-solid fa-check"></i> Konsultasi tatap muka gratis</li>
+                <li><i class="fa-solid fa-check"></i> Tanya jawab tanpa batas</li>
+                <li><i class="fa-solid fa-check"></i> Tanpa biaya apapun</li>
+              </ul>
+            </div>
+
+            <!-- Operating Hours -->
+            <div class="bk-info-box">
+              <h5><i class="fa-solid fa-clock"></i> Jam Operasional</h5>
+              <div class="bk-hours">
+                <div><span>Senin – Jumat</span><strong>08:00 – 17:00</strong></div>
+                <div><span>Sabtu</span><strong>09:00 – 14:00</strong></div>
+                <div><span>Minggu</span><strong>Tutup</strong></div>
+              </div>
+            </div>
+
+          </aside>
+        </div>
+
+      </div>
+
+      <!-- ===== BUY PROPERTY ===== -->
+      <div class="bk-panel" id="panel-buy">
+
+        <div class="bk-grid">
+
+          <!-- Form -->
+          <div class="bk-form-wrap">
+            <div class="bk-form-header">
+              <div class="bk-form-icon buy"><i class="fa-solid fa-key"></i></div>
+              <div>
+                <h2>Buy a Property</h2>
+                <p>Ceritakan kebutuhan Anda dan konsultan kami akan mencarikan pilihan terbaik.</p>
+              </div>
+            </div>
+
+            <form id="form-buy" class="bk-form">
+              <div class="bk-form-row">
+                <div class="bk-field">
+                  <label>Nama Lengkap <span>*</span></label>
+                  <input type="text" placeholder="John Doe" required />
+                </div>
+                <div class="bk-field">
+                  <label>Nomor Telepon <span>*</span></label>
+                  <input type="tel" placeholder="+62 812 3456 7890" required />
+                </div>
+              </div>
+              <div class="bk-form-row">
+                <div class="bk-field">
+                  <label>Email <span>*</span></label>
+                  <input type="email" placeholder="john@email.com" required />
+                </div>
+                <div class="bk-field">
+                  <label>Tipe Properti</label>
+                  <select>
+                    <option value="">Pilih Tipe</option>
+                    <option>Apartment / Unit</option>
+                    <option>Duplex / Triplex</option>
+                    <option>Villa</option>
+                    <option>Multistorey Building</option>
+                    <option>Modern House</option>
+                  </select>
+                </div>
+              </div>
+              <div class="bk-form-row">
+                <div class="bk-field">
+                  <label>Budget Maksimal</label>
+                  <select>
+                    <option>BDT 1,00,000 – 2,00,000</option>
+                    <option>BDT 2,00,000 – 3,00,000</option>
+                    <option>BDT 3,00,000 – 5,00,000</option>
+                    <option>Di atas BDT 5,00,000</option>
+                  </select>
+                </div>
+                <div class="bk-field">
+                  <label>Metode Pembayaran</label>
+                  <select>
+                    <option>Cash / Tunai</option>
+                    <option>KPR / Cicilan Bank</option>
+                    <option>Crypto</option>
+                    <option>Belum Ditentukan</option>
+                  </select>
+                </div>
+              </div>
+              <div class="bk-form-row">
+                <div class="bk-field">
+                  <label>Jumlah Kamar Tidur</label>
+                  <select>
+                    <option>1 Kamar</option>
+                    <option>2 Kamar</option>
+                    <option>3 Kamar</option>
+                    <option>4+ Kamar</option>
+                  </select>
+                </div>
+                <div class="bk-field">
+                  <label>Lokasi yang Diinginkan</label>
+                  <input type="text" placeholder="Contoh: Jakarta Selatan, BSD..." />
+                </div>
+              </div>
+              <div class="bk-field full">
+                <label>Deskripsi Kebutuhan</label>
+                <textarea placeholder="Ceritakan detail kebutuhan properti Anda: fasilitas yang diinginkan, dekat sekolah/kantor, dll..." rows="4"></textarea>
+              </div>
+
+              <!-- Checkbox preferences -->
+              <div class="bk-field full">
+                <label>Fasilitas yang Diinginkan</label>
+                <div class="bk-checkboxes">
+                  <label class="bk-check"><input type="checkbox" /> <span>Kolam Renang</span></label>
+                  <label class="bk-check"><input type="checkbox" /> <span>Gym / Fitness</span></label>
+                  <label class="bk-check"><input type="checkbox" /> <span>Parkir Luas</span></label>
+                  <label class="bk-check"><input type="checkbox" /> <span>24h Security</span></label>
+                  <label class="bk-check"><input type="checkbox" /> <span>Pet Friendly</span></label>
+                  <label class="bk-check"><input type="checkbox" /> <span>Smart Home</span></label>
+                  <label class="bk-check"><input type="checkbox" /> <span>Rooftop</span></label>
+                  <label class="bk-check"><input type="checkbox" /> <span>Furnished</span></label>
+                </div>
+              </div>
+
+              <button type="submit" class="bk-submit buy">
+                <i class="fa-solid fa-key"></i> Ajukan Pembelian
+              </button>
+            </form>
+          </div>
+
+          <!-- Sidebar Info -->
+          <aside class="bk-sidebar">
+
+            <!-- Process Steps -->
+            <div class="bk-steps-card">
+              <h5><i class="fa-solid fa-list-check"></i> Proses Pembelian</h5>
+              <div class="bk-steps">
+                <div class="bk-step">
+                  <div class="bk-step-num">1</div>
+                  <div>
+                    <strong>Konsultasi</strong>
+                    <p>Diskusi kebutuhan &amp; budget bersama konsultan</p>
+                  </div>
+                </div>
+                <div class="bk-step">
+                  <div class="bk-step-num">2</div>
+                  <div>
+                    <strong>Pilih Properti</strong>
+                    <p>Kami carikan pilihan terbaik sesuai kriteria</p>
+                  </div>
+                </div>
+                <div class="bk-step">
+                  <div class="bk-step-num">3</div>
+                  <div>
+                    <strong>Survey &amp; Negosiasi</strong>
+                    <p>Kunjungi properti &amp; negosiasi harga terbaik</p>
+                  </div>
+                </div>
+                <div class="bk-step">
+                  <div class="bk-step-num">4</div>
+                  <div>
+                    <strong>Proses Legal</strong>
+                    <p>Pengurusan dokumen &amp; akta notaris</p>
+                  </div>
+                </div>
+                <div class="bk-step">
+                  <div class="bk-step-num">5</div>
+                  <div>
+                    <strong>Serah Terima Kunci</strong>
+                    <p>Properti resmi menjadi milik Anda</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="bk-trust-grid">
+              <div class="bk-trust-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Berlisensi OJK</span>
+              </div>
+              <div class="bk-trust-item">
+                <i class="fa-solid fa-file-contract"></i>
+                <span>Legal Terjamin</span>
+              </div>
+              <div class="bk-trust-item">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <span>Harga Transparan</span>
+              </div>
+              <div class="bk-trust-item">
+                <i class="fa-solid fa-headset"></i>
+                <span>Support 24/7</span>
+              </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="bk-info-box">
+              <h5><i class="fa-solid fa-circle-question"></i> FAQ</h5>
+              <div class="bk-faq">
+                <details>
+                  <summary>Apakah ada biaya konsultasi?</summary>
+                  <p>Tidak. Konsultasi dengan agent kami sepenuhnya gratis.</p>
+                </details>
+                <details>
+                  <summary>Berapa lama proses pembelian?</summary>
+                  <p>Rata-rata 2–4 minggu tergantung metode pembayaran dan proses legal.</p>
+                </details>
+                <details>
+                  <summary>Apakah bisa KPR?</summary>
+                  <p>Ya, kami bekerja sama dengan 10+ bank untuk membantu proses KPR Anda.</p>
+                </details>
+              </div>
+            </div>
+
+          </aside>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SUCCESS MODAL -->
+  <div class="bk-modal-overlay" id="bk-modal">
+    <div class="bk-modal">
+      <div class="bk-modal-icon" id="modal-icon">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <h3 id="modal-title">Berhasil!</h3>
+      <p id="modal-msg">Permintaan Anda telah terkirim. Tim kami akan menghubungi Anda segera.</p>
+      <button class="bk-modal-close" id="modal-close">Oke, Tutup</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <i class="fa-solid fa-building-columns"></i>
+          <span>BennEstate</span>
+        </div>
+        <p>Platform properti terpercaya untuk menemukan hunian impian Anda.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Navigasi</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="agent.html">Agent</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Layanan</h5>
+        <ul>
+          <li><a href="#">Jual Properti</a></li>
+          <li><a href="#">Sewa Properti</a></li>
+          <li><a href="#">Konsultasi</a></li>
+          <li><a href="#">Asuransi</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h5>Ikuti Kami</h5>
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 BennEstate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="booking.js"></script>
+</body>
+</html>

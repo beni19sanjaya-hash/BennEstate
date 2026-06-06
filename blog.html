@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - BennEstate</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="agent.html">Agent</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="booking.html" class="nav-book-btn">Book / Buy</a></li>
+      </ul>
+      <div class="nav-logo">
+        <i class="fa-solid fa-building-columns"></i>
+        <span>BennEstate</span>
+      </div>
+      <a href="tel:+6881823427079" class="nav-phone">
+        <i class="fa-solid fa-phone"></i>
+        +6881 823 427 079
+      </a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80')">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="page-breadcrumb"><a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> Blog</p>
+      <h1>Blog &amp; Insight</h1>
+      <p>Tips, tren, dan panduan terlengkap seputar dunia properti di Indonesia.</p>
+    </div>
+  </section>
+
+  <!-- FEATURED POST -->
+  <section class="page-section">
+    <div class="container">
+      <div class="blog-featured reveal">
+        <div class="blog-featured-img" style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=900&q=80')">
+          <span class="blog-cat-badge">Tips &amp; Trik</span>
+        </div>
+        <div class="blog-featured-text">
+          <p class="blog-meta"><i class="fa-regular fa-calendar"></i> 15 Mei 2026 &nbsp;·&nbsp; <i class="fa-regular fa-user"></i> Budi Santoso</p>
+          <h2>10 Tips Membeli Properti Pertama Anda di 2026</h2>
+          <p>Membeli properti pertama adalah momen yang penuh kegembiraan sekaligus penuh tantangan. Mulai dari memilih lokasi, menghitung cicilan, hingga proses legal — semuanya perlu diperhatikan dengan cermat...</p>
+          <a href="#" class="btn-read-more">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG GRID -->
+  <section class="page-section bg-light">
+    <div class="container">
+      <div class="blog-layout">
+
+        <!-- POSTS -->
+        <div class="blog-posts">
+          <!-- Category Tabs -->
+          <div class="blog-tabs reveal">
+            <button class="blog-tab active" data-tab="all">Semua</button>
+            <button class="blog-tab" data-tab="tips">Tips &amp; Trik</button>
+            <button class="blog-tab" data-tab="investasi">Investasi</button>
+            <button class="blog-tab" data-tab="tren">Tren Properti</button>
+            <button class="blog-tab" data-tab="hukum">Hukum &amp; Legal</button>
+          </div>
+
+          <div class="blog-grid" id="blog-grid">
+
+            <article class="blog-card reveal" data-tab="tips">
+              <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80')">
+                <span class="blog-cat-badge">Tips &amp; Trik</span>
+              </div>
+              <div class="blog-card-body">
+                <p class="blog-meta"><i class="fa-regular fa-calendar"></i> 20 Mei 2026</p>
+                <h4>Cara Negosiasi Harga Properti agar Dapat Harga Terbaik</h4>
+                <p>Negosiasi adalah seni. Dalam dunia properti, kemampuan bernegosiasi bisa menghemat puluhan juta rupiah.</p>
+                <a href="#" class="blog-link">Baca Lebih <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+
+            <article class="blog-card reveal" data-tab="investasi">
+              <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80')">
+                <span class="blog-cat-badge" style="background:#f59e0b">Investasi</span>
+              </div>
+              <div class="blog-card-body">
+                <p class="blog-meta"><i class="fa-regular fa-calendar"></i> 18 Mei 2026</p>
+                <h4>Investasi Properti vs Saham: Mana yang Lebih Menguntungkan?</h4>
+                <p>Perbandingan mendalam antara dua instrumen investasi populer di Indonesia berdasarkan data terkini.</p>
+                <a href="#" class="blog-link">Baca Lebih <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+
+            <article class="blog-card reveal" data-tab="tren">
+              <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&q=80')">
+                <span class="blog-cat-badge" style="background:#22c55e">Tren Properti</span>
+              </div>
+              <div class="blog-card-body">
+                <p class="blog-meta"><i class="fa-regular fa-calendar"></i> 12 Mei 2026</p>
+                <h4>5 Tren Desain Rumah yang Mendominasi 2026</h4>
+                <p>Dari konsep biophilic hingga smart home, inilah tren yang paling banyak dicari pembeli properti tahun ini.</p>
+                <a href="#" class="blog-link">Baca Lebih <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+
+            <article class="blog-card reveal" data-tab="hukum">
+              <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=500&q=80')">
+                <span class="blog-cat-badge" style="background:#ef4444">Hukum &amp; Legal</span>
+              </div>
+              <div class="blog-card-body">
+                <p class="blog-meta"><i class="fa-regular fa-calendar"></i> 8 Mei 2026</p>
+                <h4>Panduan Lengkap: Proses Balik Nama Sertifikat Rumah</h4>
+                <p>Langkah-langkah lengkap dan dokumen yang dibutuhkan untuk melakukan balik nama sertifikat properti.</p>
+                <a href="#" class="blog-link">Baca Lebih <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+
+            <article class="blog-card reveal" data-tab="investasi">
+              <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1460472178825-e5240623afd5?w=500&q=80')">
+                <span class="blog-cat-badge" style="background:#f59e0b">Investasi</span>
+              </div>
+              <div class="blog-card-body">
+                <p class="blog-meta"><i class="fa-regular fa-calendar"></i> 3 Mei 2026</p>
+                <h4>KPR vs Cash: Strategi Terbaik untuk Pembeli Pertama</h4>
+                <p>Simulasi dan analisis lengkap untuk membantu Anda memutuskan cara terbaik membeli properti.</p>
+                <a href="#" class="blog-link">Baca Lebih <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+
+            <article class="blog-card reveal" data-tab="tips">
+              <div class="blog-img" style="background-image:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&q=80')">
+                <span class="blog-cat-badge">Tips &amp; Trik</span>
+              </div>
+              <div class="blog-card-body">
+                <p class="blog-meta"><i class="fa-regular fa-calendar"></i> 28 Apr 2026</p>
+                <h4>Checklist 30 Poin Sebelum Membeli Rumah Bekas</h4>
+                <p>Jangan sampai menyesal! Periksa 30 hal penting ini sebelum menandatangani kontrak jual beli.</p>
+                <a href="#" class="blog-link">Baca Lebih <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="blog-sidebar">
+          <div class="sidebar-widget reveal">
+            <h5>Cari Artikel</h5>
+            <div class="sidebar-search">
+              <input type="text" placeholder="Cari artikel..." />
+              <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+          </div>
+
+          <div class="sidebar-widget reveal">
+            <h5>Kategori</h5>
+            <ul class="sidebar-cats">
+              <li><a href="#">Tips &amp; Trik <span>12</span></a></li>
+              <li><a href="#">Investasi <span>8</span></a></li>
+              <li><a href="#">Tren Properti <span>6</span></a></li>
+              <li><a href="#">Hukum &amp; Legal <span>5</span></a></li>
+              <li><a href="#">Berita Terkini <span>9</span></a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-widget reveal">
+            <h5>Artikel Populer</h5>
+            <div class="popular-posts">
+              <a href="#" class="popular-post">
+                <div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=100&q=80')"></div>
+                <div class="pp-text">
+                  <p>10 Tips Membeli Properti Pertama</p>
+                  <span>15 Mei 2026</span>
+                </div>
+              </a>
+              <a href="#" class="popular-post">
+                <div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=100&q=80')"></div>
+                <div class="pp-text">
+                  <p>Investasi Properti vs Saham</p>
+                  <span>18 Mei 2026</span>
+                </div>
+              </a>
+              <a href="#" class="popular-post">
+                <div class="pp-img" style="background-image:url('https://images.unsplash.com/photo-1460472178825-e5240623afd5?w=100&q=80')"></div>
+                <div class="pp-text">
+                  <p>KPR vs Cash: Strategi Terbaik</p>
+                  <span>3 Mei 2026</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="sidebar-widget sidebar-newsletter reveal">
+            <h5>Newsletter</h5>
+            <p>Dapatkan insight properti terbaru langsung di inbox Anda.</p>
+            <input type="email" placeholder="Email Anda..." />
+            <button class="btn-newsletter">Subscribe</button>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><i class="fa-solid fa-building-columns"></i><span>BennEstate</span></div>
+        <p>Platform properti terpercaya untuk menemukan hunian impian Anda.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Navigasi</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="agent.html">Agent</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Layanan</h5>
+        <ul>
+          <li><a href="#">Jual Properti</a></li>
+          <li><a href="#">Sewa Properti</a></li>
+          <li><a href="#">Konsultasi</a></li>
+          <li><a href="#">Asuransi</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h5>Ikuti Kami</h5>
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 BennEstate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="pages.js"></script>
+</body>
+</html>
+

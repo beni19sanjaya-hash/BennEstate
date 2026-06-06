@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Agents - BennEstate</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="agent.html" class="active">Agent</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="booking.html" class="nav-book-btn">Book / Buy</a></li>
+      </ul>
+      <div class="nav-logo">
+        <i class="fa-solid fa-building-columns"></i>
+        <span>BennEstate</span>
+      </div>
+      <a href="tel:+6881823427079" class="nav-phone">
+        <i class="fa-solid fa-phone"></i>
+        +6881 823 427 079
+      </a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=80')">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="page-breadcrumb"><a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> Agent</p>
+      <h1>Meet Our Agents</h1>
+      <p>Tim profesional kami siap memandu Anda dalam setiap langkah perjalanan properti.</p>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE OUR AGENTS -->
+  <section class="page-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Mengapa Memilih Agent Kami?</h2>
+        <p>Agent kami bukan sekadar penjual — mereka adalah konsultan properti berpengalaman.</p>
+      </div>
+      <div class="agent-perks">
+        <div class="agent-perk reveal">
+          <div class="perk-icon"><i class="fa-solid fa-certificate"></i></div>
+          <h4>Bersertifikat</h4>
+          <p>Semua agent kami memiliki sertifikasi resmi dari AREBI dan OJK.</p>
+        </div>
+        <div class="agent-perk reveal">
+          <div class="perk-icon"><i class="fa-solid fa-comments"></i></div>
+          <h4>Responsif 24/7</h4>
+          <p>Siap melayani pertanyaan dan konsultasi kapan saja Anda butuhkan.</p>
+        </div>
+        <div class="agent-perk reveal">
+          <div class="perk-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+          <h4>Lokal Expert</h4>
+          <p>Menguasai seluk-beluk pasar properti di area spesialisasi masing-masing.</p>
+        </div>
+        <div class="agent-perk reveal">
+          <div class="perk-icon"><i class="fa-solid fa-handshake-simple"></i></div>
+          <h4>Komisi Transparan</h4>
+          <p>Tidak ada biaya tersembunyi. Komisi jelas dan disepakati di awal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENT LISTING -->
+  <section class="page-section bg-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Kenali Tim Agent Kami</h2>
+        <p>Pilih agent yang paling sesuai dengan kebutuhan dan lokasi properti Anda.</p>
+      </div>
+
+      <!-- SEARCH AGENT -->
+      <div class="agent-search-bar reveal">
+        <input type="text" id="agent-search" placeholder="Cari agent berdasarkan nama atau spesialisasi..." />
+        <select id="agent-area">
+          <option value="all">Semua Area</option>
+          <option value="jakarta">Jakarta</option>
+          <option value="bandung">Bandung</option>
+          <option value="surabaya">Surabaya</option>
+          <option value="bali">Bali</option>
+        </select>
+        <button id="btn-search-agent"><i class="fa-solid fa-magnifying-glass"></i> Cari</button>
+      </div>
+
+      <div class="agent-grid" id="agent-grid">
+
+        <div class="agent-card reveal" data-area="jakarta" data-name="budi santoso">
+          <div class="agent-photo-wrap">
+            <div class="agent-photo" style="background-image:url('https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80')"></div>
+            <span class="agent-status online">Online</span>
+          </div>
+          <div class="agent-info">
+            <h4>Budi Santoso</h4>
+            <p class="agent-role">Senior Property Consultant</p>
+            <p class="agent-area-tag"><i class="fa-solid fa-location-dot"></i> Jakarta Pusat</p>
+            <div class="agent-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>4.9 (128 ulasan)</span>
+            </div>
+            <div class="agent-stats-row">
+              <div><strong>42</strong><span>Listing</span></div>
+              <div><strong>7yr</strong><span>Pengalaman</span></div>
+              <div><strong>200+</strong><span>Transaksi</span></div>
+            </div>
+            <div class="agent-actions">
+              <a href="#" class="btn-agent-contact"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+              <a href="#" class="btn-agent-profile">Profil</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="agent-card reveal" data-area="jakarta" data-name="sari dewi">
+          <div class="agent-photo-wrap">
+            <div class="agent-photo" style="background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80')"></div>
+            <span class="agent-status online">Online</span>
+          </div>
+          <div class="agent-info">
+            <h4>Sari Dewi</h4>
+            <p class="agent-role">Luxury Property Specialist</p>
+            <p class="agent-area-tag"><i class="fa-solid fa-location-dot"></i> Jakarta Selatan</p>
+            <div class="agent-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <span>4.7 (95 ulasan)</span>
+            </div>
+            <div class="agent-stats-row">
+              <div><strong>38</strong><span>Listing</span></div>
+              <div><strong>5yr</strong><span>Pengalaman</span></div>
+              <div><strong>150+</strong><span>Transaksi</span></div>
+            </div>
+            <div class="agent-actions">
+              <a href="#" class="btn-agent-contact"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+              <a href="#" class="btn-agent-profile">Profil</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="agent-card reveal" data-area="bandung" data-name="andi pratama">
+          <div class="agent-photo-wrap">
+            <div class="agent-photo" style="background-image:url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80')"></div>
+            <span class="agent-status busy">Busy</span>
+          </div>
+          <div class="agent-info">
+            <h4>Andi Pratama</h4>
+            <p class="agent-role">Residential Agent</p>
+            <p class="agent-area-tag"><i class="fa-solid fa-location-dot"></i> Bandung</p>
+            <div class="agent-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <span>4.5 (72 ulasan)</span>
+            </div>
+            <div class="agent-stats-row">
+              <div><strong>25</strong><span>Listing</span></div>
+              <div><strong>4yr</strong><span>Pengalaman</span></div>
+              <div><strong>90+</strong><span>Transaksi</span></div>
+            </div>
+            <div class="agent-actions">
+              <a href="#" class="btn-agent-contact"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+              <a href="#" class="btn-agent-profile">Profil</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="agent-card reveal" data-area="jakarta" data-name="rina wati">
+          <div class="agent-photo-wrap">
+            <div class="agent-photo" style="background-image:url('https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80')"></div>
+            <span class="agent-status online">Online</span>
+          </div>
+          <div class="agent-info">
+            <h4>Rina Wati</h4>
+            <p class="agent-role">Commercial Property Agent</p>
+            <p class="agent-area-tag"><i class="fa-solid fa-location-dot"></i> Jakarta Barat</p>
+            <div class="agent-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>5.0 (63 ulasan)</span>
+            </div>
+            <div class="agent-stats-row">
+              <div><strong>31</strong><span>Listing</span></div>
+              <div><strong>6yr</strong><span>Pengalaman</span></div>
+              <div><strong>120+</strong><span>Transaksi</span></div>
+            </div>
+            <div class="agent-actions">
+              <a href="#" class="btn-agent-contact"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+              <a href="#" class="btn-agent-profile">Profil</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="agent-card reveal" data-area="surabaya" data-name="dian kusuma">
+          <div class="agent-photo-wrap">
+            <div class="agent-photo" style="background-image:url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80')"></div>
+            <span class="agent-status online">Online</span>
+          </div>
+          <div class="agent-info">
+            <h4>Dian Kusuma</h4>
+            <p class="agent-role">Investment Property Advisor</p>
+            <p class="agent-area-tag"><i class="fa-solid fa-location-dot"></i> Surabaya</p>
+            <div class="agent-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <span>4.6 (88 ulasan)</span>
+            </div>
+            <div class="agent-stats-row">
+              <div><strong>29</strong><span>Listing</span></div>
+              <div><strong>5yr</strong><span>Pengalaman</span></div>
+              <div><strong>110+</strong><span>Transaksi</span></div>
+            </div>
+            <div class="agent-actions">
+              <a href="#" class="btn-agent-contact"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+              <a href="#" class="btn-agent-profile">Profil</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="agent-card reveal" data-area="bali" data-name="made surya">
+          <div class="agent-photo-wrap">
+            <div class="agent-photo" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80')"></div>
+            <span class="agent-status busy">Busy</span>
+          </div>
+          <div class="agent-info">
+            <h4>Made Surya</h4>
+            <p class="agent-role">Villa &amp; Resort Specialist</p>
+            <p class="agent-area-tag"><i class="fa-solid fa-location-dot"></i> Bali</p>
+            <div class="agent-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>4.8 (104 ulasan)</span>
+            </div>
+            <div class="agent-stats-row">
+              <div><strong>55</strong><span>Listing</span></div>
+              <div><strong>8yr</strong><span>Pengalaman</span></div>
+              <div><strong>280+</strong><span>Transaksi</span></div>
+            </div>
+            <div class="agent-actions">
+              <a href="#" class="btn-agent-contact"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+              <a href="#" class="btn-agent-profile">Profil</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BECOME AN AGENT CTA -->
+  <section class="agent-join-section">
+    <div class="container">
+      <div class="agent-join-card reveal">
+        <div class="agent-join-left">
+          <span class="tag-label" style="color:#fff;background:rgba(255,255,255,0.2)">Bergabung</span>
+          <h2>Jadilah Agent BennEstate</h2>
+          <p>Raih penghasilan lebih tinggi dengan bergabung bersama jaringan agent profesional kami. Training, tools, dan support tersedia.</p>
+          <ul class="join-benefits">
+            <li><i class="fa-solid fa-check"></i> Komisi kompetitif hingga 3%</li>
+            <li><i class="fa-solid fa-check"></i> Training gratis dari expert</li>
+            <li><i class="fa-solid fa-check"></i> Akses database properti eksklusif</li>
+            <li><i class="fa-solid fa-check"></i> Marketing support penuh</li>
+          </ul>
+          <a href="#" class="btn-join-agent">Daftar Sekarang <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="agent-join-right">
+          <div class="join-stats">
+            <div class="join-stat">
+              <h3>50+</h3>
+              <p>Agent Aktif</p>
+            </div>
+            <div class="join-stat">
+              <h3>Rp 25jt</h3>
+              <p>Rata-rata Penghasilan/Bulan</p>
+            </div>
+            <div class="join-stat">
+              <h3>100%</h3>
+              <p>Support Penuh</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="page-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Apa Kata Klien Kami</h2>
+        <p>Ribuan keluarga telah mempercayakan kebutuhan properti mereka kepada kami.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testi-card reveal">
+          <div class="testi-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Budi sangat membantu proses pembelian apartemen saya. Responsif dan jujur dalam memberikan informasi. Sangat direkomendasikan!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:#eef0fd;color:#2D3BE0;font-weight:700">AW</div>
+            <div>
+              <strong>Ahmad Wijaya</strong>
+              <span>Pembeli Apartemen, Jakarta</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Sari Dewi luar biasa! Dia memahami betul kebutuhan kami dan menemukan rumah yang persis kami impikan dalam waktu 2 minggu."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:#fef3e2;color:#f59e0b;font-weight:700">LH</div>
+            <div>
+              <strong>Linda Hartono</strong>
+              <span>Pembeli Rumah, Jakarta Selatan</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <p>"Made Surya adalah spesialis villa terbaik di Bali. Investasi villa saya memberikan return yang sangat baik berkat sarannya."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:#e8faf0;color:#22c55e;font-weight:700">RP</div>
+            <div>
+              <strong>Reza Putra</strong>
+              <span>Investor Properti, Bali</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><i class="fa-solid fa-building-columns"></i><span>BennEstate</span></div>
+        <p>Platform properti terpercaya untuk menemukan hunian impian Anda.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Navigasi</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="agent.html">Agent</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Layanan</h5>
+        <ul>
+          <li><a href="#">Jual Properti</a></li>
+          <li><a href="#">Sewa Properti</a></li>
+          <li><a href="#">Konsultasi</a></li>
+          <li><a href="#">Asuransi</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h5>Ikuti Kami</h5>
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 BennEstate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="pages.js"></script>
+</body>
+</html>
+

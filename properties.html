@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Properties - BennEstate</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="properties.html" class="active">Properties</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="agent.html">Agent</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="booking.html" class="nav-book-btn">Book / Buy</a></li>
+      </ul>
+      <div class="nav-logo">
+        <i class="fa-solid fa-building-columns"></i>
+        <span>BennEstate</span>
+      </div>
+      <a href="tel:+6881823427079" class="nav-phone">
+        <i class="fa-solid fa-phone"></i>
+        +6881 823 427 079
+      </a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=80')">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="page-breadcrumb"><a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> Properties</p>
+      <h1>All Properties</h1>
+      <p>Temukan properti terbaik yang sesuai dengan kebutuhan dan anggaran Anda.</p>
+    </div>
+  </section>
+
+  <!-- FILTER BAR -->
+  <section class="filter-section">
+    <div class="container">
+      <div class="filter-bar reveal">
+        <div class="filter-group">
+          <label>Tipe</label>
+          <select id="filter-type">
+            <option value="all">Semua</option>
+            <option value="sale">For Sale</option>
+            <option value="rent">For Rent</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Kategori</label>
+          <select id="filter-cat">
+            <option value="all">Semua</option>
+            <option value="apartment">Apartment</option>
+            <option value="duplex">Duplex</option>
+            <option value="villa">Villa</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Harga Maks</label>
+          <select id="filter-price">
+            <option value="all">Semua</option>
+            <option value="2">s/d BDT 2,00,000</option>
+            <option value="3">s/d BDT 3,00,000</option>
+            <option value="4">s/d BDT 4,00,000</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Kamar Tidur</label>
+          <select id="filter-bed">
+            <option value="all">Semua</option>
+            <option value="2">2+</option>
+            <option value="3">3+</option>
+            <option value="4">4+</option>
+          </select>
+        </div>
+        <button class="btn-filter" id="btn-filter">
+          <i class="fa-solid fa-sliders"></i> Filter
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPERTIES LISTING -->
+  <section class="page-section">
+    <div class="container">
+      <div class="listing-header reveal">
+        <p id="listing-count">Menampilkan <strong>8 properti</strong></p>
+        <div class="sort-group">
+          <label>Urutkan:</label>
+          <select id="sort-select">
+            <option value="default">Terbaru</option>
+            <option value="price-asc">Harga Terendah</option>
+            <option value="price-desc">Harga Tertinggi</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="properties-grid prop-listing" id="prop-grid">
+
+        <div class="property-card reveal" data-type="sale" data-cat="apartment" data-price="2.45" data-bed="4">
+          <div class="prop-img prop-img-1">
+            <span class="prop-badge">For Sale</span>
+            <button class="prop-fav"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="prop-info">
+            <h4>Skyper Pool Apartment</h4>
+            <p class="prop-location"><i class="fa-solid fa-location-dot"></i> Floor 13, Downtown, Dhaka</p>
+            <div class="prop-meta">
+              <span class="prop-price">BDT 2,45,000</span>
+              <div class="prop-features">
+                <span><i class="fa-solid fa-bed"></i> 4</span>
+                <span><i class="fa-solid fa-bath"></i> 2</span>
+                <span><i class="fa-solid fa-ruler-combined"></i> 180 ft</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="property-card reveal" data-type="sale" data-cat="apartment" data-price="2.78" data-bed="3">
+          <div class="prop-img prop-img-2">
+            <span class="prop-badge">For Sale</span>
+            <button class="prop-fav"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="prop-info">
+            <h4>Cedar Residence</h4>
+            <p class="prop-location"><i class="fa-solid fa-location-dot"></i> Floor 12, Gulshan, Dhaka</p>
+            <div class="prop-meta">
+              <span class="prop-price">BDT 2,78,000</span>
+              <div class="prop-features">
+                <span><i class="fa-solid fa-bed"></i> 3</span>
+                <span><i class="fa-solid fa-bath"></i> 2</span>
+                <span><i class="fa-solid fa-ruler-combined"></i> 215 ft</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="property-card reveal" data-type="sale" data-cat="duplex" data-price="3.40" data-bed="5">
+          <div class="prop-img prop-img-3">
+            <span class="prop-badge">For Sale</span>
+            <button class="prop-fav"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="prop-info">
+            <h4>Lakeside Apartment</h4>
+            <p class="prop-location"><i class="fa-solid fa-location-dot"></i> Block 5, Banani, Dhaka</p>
+            <div class="prop-meta">
+              <span class="prop-price">BDT 3,40,000</span>
+              <div class="prop-features">
+                <span><i class="fa-solid fa-bed"></i> 5</span>
+                <span><i class="fa-solid fa-bath"></i> 3</span>
+                <span><i class="fa-solid fa-ruler-combined"></i> 260 ft</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="property-card reveal" data-type="rent" data-cat="apartment" data-price="1.80" data-bed="3">
+          <div class="prop-img prop-img-4">
+            <span class="prop-badge badge-rent">For Rent</span>
+            <button class="prop-fav"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="prop-info">
+            <h4>Sky Tower Residences</h4>
+            <p class="prop-location"><i class="fa-solid fa-location-dot"></i> Floor 20, Motijheel, Dhaka</p>
+            <div class="prop-meta">
+              <span class="prop-price">BDT 1,80,000</span>
+              <div class="prop-features">
+                <span><i class="fa-solid fa-bed"></i> 3</span>
+                <span><i class="fa-solid fa-bath"></i> 2</span>
+                <span><i class="fa-solid fa-ruler-combined"></i> 190 ft</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="property-card reveal" data-type="sale" data-cat="villa" data-price="3.90" data-bed="4">
+          <div class="prop-img" style="background-image:url('https://images.unsplash.com/photo-1600047509358-9dc75507daeb?w=600&q=80')">
+            <span class="prop-badge">For Sale</span>
+            <button class="prop-fav"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="prop-info">
+            <h4>Emerald Villa Park</h4>
+            <p class="prop-location"><i class="fa-solid fa-location-dot"></i> Pondok Indah, Jakarta</p>
+            <div class="prop-meta">
+              <span class="prop-price">BDT 3,90,000</span>
+              <div class="prop-features">
+                <span><i class="fa-solid fa-bed"></i> 4</span>
+                <span><i class="fa-solid fa-bath"></i> 3</span>
+                <span><i class="fa-solid fa-ruler-combined"></i> 320 ft</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="property-card reveal" data-type="rent" data-cat="duplex" data-price="2.20" data-bed="2">
+          <div class="prop-img" style="background-image:url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&q=80')">
+            <span class="prop-badge badge-rent">For Rent</span>
+            <button class="prop-fav"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="prop-info">
+            <h4>Green Park Duplex</h4>
+            <p class="prop-location"><i class="fa-solid fa-location-dot"></i> Kebayoran Baru, Jakarta</p>
+            <div class="prop-meta">
+              <span class="prop-price">BDT 2,20,000</span>
+              <div class="prop-features">
+                <span><i class="fa-solid fa-bed"></i> 2</span>
+                <span><i class="fa-solid fa-bath"></i> 2</span>
+                <span><i class="fa-solid fa-ruler-combined"></i> 150 ft</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="property-card reveal" data-type="sale" data-cat="apartment" data-price="1.95" data-bed="2">
+          <div class="prop-img" style="background-image:url('https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=600&q=80')">
+            <span class="prop-badge">For Sale</span>
+            <button class="prop-fav"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="prop-info">
+            <h4>Sunrise Studio Loft</h4>
+            <p class="prop-location"><i class="fa-solid fa-location-dot"></i> Kemang, Jakarta Selatan</p>
+            <div class="prop-meta">
+              <span class="prop-price">BDT 1,95,000</span>
+              <div class="prop-features">
+                <span><i class="fa-solid fa-bed"></i> 2</span>
+                <span><i class="fa-solid fa-bath"></i> 1</span>
+                <span><i class="fa-solid fa-ruler-combined"></i> 110 ft</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="property-card reveal" data-type="rent" data-cat="villa" data-price="3.10" data-bed="5">
+          <div class="prop-img" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80')">
+            <span class="prop-badge badge-rent">For Rent</span>
+            <button class="prop-fav"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="prop-info">
+            <h4>Palm Court Villa</h4>
+            <p class="prop-location"><i class="fa-solid fa-location-dot"></i> BSD City, Tangerang</p>
+            <div class="prop-meta">
+              <span class="prop-price">BDT 3,10,000</span>
+              <div class="prop-features">
+                <span><i class="fa-solid fa-bed"></i> 5</span>
+                <span><i class="fa-solid fa-bath"></i> 4</span>
+                <span><i class="fa-solid fa-ruler-combined"></i> 400 ft</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PAGINATION -->
+      <div class="pagination reveal">
+        <button class="pg-btn active">1</button>
+        <button class="pg-btn">2</button>
+        <button class="pg-btn">3</button>
+        <button class="pg-btn pg-next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card reveal">
+        <div class="cta-text">
+          <h3>Tidak menemukan yang Anda cari?</h3>
+          <p>Tim kami siap membantu Anda menemukan properti yang sempurna.</p>
+        </div>
+        <a href="agent.html" class="btn-cta">Hubungi Agent <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><i class="fa-solid fa-building-columns"></i><span>BennEstate</span></div>
+        <p>Platform properti terpercaya untuk menemukan hunian impian Anda.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Navigasi</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="agent.html">Agent</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Layanan</h5>
+        <ul>
+          <li><a href="#">Jual Properti</a></li>
+          <li><a href="#">Sewa Properti</a></li>
+          <li><a href="#">Konsultasi</a></li>
+          <li><a href="#">Asuransi</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h5>Ikuti Kami</h5>
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 BennEstate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="pages.js"></script>
+</body>
+</html>
+
