@@ -14,23 +14,30 @@
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <ul class="nav-links">
+      <div class="nav-logo">
+        <i class="fa-solid fa-building-columns"></i>
+        <span>BennEstate</span>
+      </div>
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="properties.html" class="active">Properties</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="agent.html">Agent</a></li>
         <li><a href="index.html#contact">Contact</a></li>
-        <li><a href="booking.html" class="nav-book-btn">Book / Buy</a></li>
+        <li><a href="booking.html" class="nav-mobile-book">Book / Buy</a></li>
       </ul>
-      <div class="nav-logo">
-        <i class="fa-solid fa-building-columns"></i>
-        <span>BennEstate</span>
+      <div class="nav-right">
+        <a href="booking.html" class="nav-cta-btn">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span>Book / Buy</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-      <a href="tel:+6881823427079" class="nav-phone">
-        <i class="fa-solid fa-phone"></i>
-        +6881 823 427 079
-      </a>
     </div>
   </nav>
 
@@ -328,4 +335,6 @@
   <script src="pages.js"></script>
 </body>
 </html>
+
+
 
